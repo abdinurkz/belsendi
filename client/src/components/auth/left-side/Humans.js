@@ -1,9 +1,10 @@
 import React from "react";
-import first from "../../assets/images/man-stroller.svg";
-import second from "../../assets/images/man-red.svg";
-import third from "../../assets/images/man-white.svg";
-import fourth from "../../assets/images/woman-blue.svg";
-import fifth from "../../assets/images/woman-white.svg";
+import first from "../../../assets/images/man-stroller.svg";
+import second from "../../../assets/images/man-red.svg";
+import third from "../../../assets/images/man-white.svg";
+import fourth from "../../../assets/images/woman-blue.svg";
+import fifth from "../../../assets/images/woman-white.svg";
+import "./Humans.css"
 
 
 const Humans = () => {

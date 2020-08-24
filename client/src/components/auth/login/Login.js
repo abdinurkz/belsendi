@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { NavLink, Redirect } from 'react-router-dom';
 import { login } from '../../../store/actions/auth.action'
 import { connect } from 'react-redux'
+import Humans from "../left-side/Humans";
 import '../auth.css'
-import Humans from "../Humans";
 
 const Login = (props) => {
 
@@ -17,7 +17,7 @@ const Login = (props) => {
         props.login(state.username, state.password);
     };
 
-    const onChange = e => setState({ [e.target.name]:e.target.value });
+    const onChange = e => setState({ [e.target.name]: e.target.value });
 
 
     if (props.isAuthenticated) {
