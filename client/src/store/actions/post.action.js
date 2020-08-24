@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { tokenConfig } from './auth.action'
-import { GET_POST, ADD_POST } from './types';
+import { GET_POST, ADD_POST } from '../types';
 
 // GET POSTS
 export const getPost = () => (dispatch, getState) => {

@@ -1,0 +1,173 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    height: 100vh;
+    overflow: hidden;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.left-side {
+    background: #627CFF;
+    display: flex;
+}
+.fifth {
+    position: absolute;
+    left: 4%;
+    right: 83%;
+    top: 17%;
+    bottom: 56%;
+}
+.second {
+    position: absolute;
+    left: 14%;
+    right: 71%;
+    top: 28%;
+    bottom: 42%;
+}
+.first {
+    position: absolute;
+    left: 27%;
+    right: 35%;
+    top: 15%;
+    bottom: 61%;
+}
+.third {
+    position: absolute;
+    left: 19.1%;
+    right: 64.38%;
+    top: 53%;
+    bottom: 12.7%;
+    z-index: 2;
+}
+.fourth {
+    position: absolute;
+    left: 29%;
+    right: 53%;
+    top: 40%;
+    bottom: 28%;
+    z-index: 1;
+}
+.right-side {
+    background: #4557b3;
+    color: white;
+}
+.login-fields {
+    display: grid;
+}
+.title {
+    font-size: 36px;
+    text-align: center;
+    font-family: Proxima Nova;
+    line-height: 58px;
+    font-weight: normal;
+    margin: 80px 120px 160px;
+}
+.login-text {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 0;
+}
+.text-field {
+    margin: 50px 110px 30px;
+    padding: 0;
+}
+#sign-in {
+    padding: 17px 120px;
+    background: #DDE3E9;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    background: white;
+    color: #4557B3;
+}
+.check {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 110px;
+}
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+input[type=text] {
+    padding: 15px 20px;
+    margin: 8px 110px;
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+input[type=password] {
+    padding: 15px 20px;
+    margin: 8px 110px;
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    border: none;
+    font-size: 16px;
+    color: white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+input[type=text]::placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type=password]::placeholder {
+    color: white;
+    font-size: 16px;
+}
+#password {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.buttons {
+    margin: 80px 200px 50px;
+}
+.buttons-sign-up {
+    margin: 80px 200px 150px;
+}
+
+.login-fields input {
+    background: none;
+}
+.sign-up-page {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    margin: 0px 150px 180px;
+    font-size: 20px;
+}
+.remember {
+    margin-right: 10px;
+}
+#forgot {
+    margin-left: 230px;
+}
+.sign-up-btn {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.develdt {
+    position: absolute;
+    top: 112%;
+    right: 52%;
+    color: white;
+    font-size: 14px;
+}
+.policy {
+    position: absolute;
+    top: 112%;
+    left: 52%;
+    color: white;
+    font-size: 14px;
+}

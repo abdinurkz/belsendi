@@ -9,7 +9,7 @@ import {
     LOGOUT_SUCCESS,
     REGISTER_SUCCESS,
     REGISTER_FAIL
-} from './types'
+} from '../types'
 
 export const loadUser = () => (dispatch, getState) => {
 

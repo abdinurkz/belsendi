@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import post from './post'
-import digest from './digest'
-import auth from './auth'
+import post from './post.reducer'
+import digest from './digest.reducer'
+import auth from './auth.reducer'
 
 export default combineReducers({
     post,

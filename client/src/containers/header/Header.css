@@ -23,10 +23,13 @@
     padding: 0;
     margin: 0;
 }
+
 .nav .brand-logo {
     margin: 0;
     font-size: 26px;
 }
-.nav .login {
 
+.nav .list li a, .nav .brand-logo a, .login {
+    text-decoration: none;
+    color: #fff;
 }

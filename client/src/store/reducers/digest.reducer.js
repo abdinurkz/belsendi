@@ -1,4 +1,4 @@
-import { GET_DIGEST } from '../actions/types.js'
+import { GET_DIGEST } from '../types'
 
 const initialState = {
     digest: []

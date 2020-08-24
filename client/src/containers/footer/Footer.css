@@ -24,3 +24,8 @@
     padding: 0;
     margin: 0;
 }
+
+.footer__list li a, .footer__nav a {
+    text-decoration: none;
+    color: #fff;
+}

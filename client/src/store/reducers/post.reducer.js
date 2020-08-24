@@ -1,4 +1,4 @@
-import { GET_POST, ADD_POST} from '../actions/types.js'
+import { GET_POST, ADD_POST} from '../types'
 
 const initialState = {
     post: []

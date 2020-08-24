@@ -1,0 +1,81 @@
+.digest-container {
+    margin: 20px 110px;
+}
+.digest-container > div {
+    background-color: transparent;
+    color: white;
+    padding: 2em;
+    border-radius: 0.5em;
+    text-align: center;
+}
+.digest-title {
+    text-align: left;
+    margin: 30px 0 0 30px;
+    color: #5C4DE8;
+}
+.digest {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+}
+.main {
+    background: #c4c4c4;
+    cursor: pointer;
+}
+.second-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 195px 195px;
+    grid-row-gap: 10px;
+}
+.first-news {
+    background: #c4c4c4;
+}
+.second-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
+.part-one {
+    background: #c4c4c4;
+}
+.part-two {
+    background: #c4c4c4;
+}
+.news {
+    margin-bottom: 180px;
+}
+.news-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-column-gap: 10px;
+}
+.news-flex > div {
+    background: #c4c4c4;
+    padding: 0;
+}
+
+.digest-image img{
+    flex: 1;
+    object-fit: cover;
+    width: 571px;
+    margin: 1px;
+    height: 398px;
+}
+.kuat {
+    position: absolute;
+    left: 160px;
+    top: 470px;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+}
+.nurkhat {
+    position: absolute;
+    top: 440px;
+    left: 160px;
+    text-align: left;
+    color: #627CFF;
+}
