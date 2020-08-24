@@ -1,6 +1,7 @@
 import React from "react";
-import Like from "../../assets/images/like.svg";
-import Comment from "../../assets/images/comment.svg";
+import Like from "../../../assets/images/like.svg";
+import Comment from "../../../assets/images/comment.svg";
+import "./PostCard.css"
 
 const PostCard = ({ image, title, description, owner, date }) => {
     return (

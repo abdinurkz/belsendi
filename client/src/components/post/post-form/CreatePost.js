@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import Profile from "../../assets/images/profile.svg";
-import Smile from "../../assets/images/smile.svg";
-import Clip from "../../assets/images/clip.svg";
+import Profile from "../../../assets/images/profile.svg";
+import Smile from "../../../assets/images/smile.svg";
+import Clip from "../../../assets/images/clip.svg";
+import "./CreatePost.css"
 
 
 const CreatePost = (props) => {

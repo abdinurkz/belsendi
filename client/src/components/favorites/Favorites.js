@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Like from '../../images/like.svg'
-import Comment from '../../images/comment.svg'
-import Logo from '../../images/almaty.jpg'
-import {withRouter} from 'react-router-dom'
+import Like from '../../assets/images/like.svg'
+import Comment from '../../assets/images/comment.svg'
+import { withRouter } from 'react-router-dom'
+import "./Favorites.css"
+
 
 export class Favorites extends Component {
     render() {
@@ -13,7 +14,7 @@ export class Favorites extends Component {
                     <div className="post-cards">
                         <div className="post-card">
                             <div className="post-image">
-                                <img src={Logo} alt="Does not exist"/>
+                                <img src={"Logo"} alt="Does not exist"/>
                             </div>
                             <div className="post-content">
                                 <h2 className="post-title">Almaty</h2>
@@ -37,7 +38,7 @@ export class Favorites extends Component {
                         </div>
                         <div className="post-card">
                             <div className="post-image">
-                                <img src={Logo} alt="Does not exist"/>
+                                <img src={"Logo"} alt="Does not exist"/>
                             </div>
                             <div className="post-content">
                                 <h2 className="post-title">Almaty</h2>
@@ -61,7 +62,7 @@ export class Favorites extends Component {
                         </div>
                         <div className="post-card">
                             <div className="post-image">
-                                <img src={Logo} alt="Does not exist"/>
+                                <img src={"Logo"} alt="Does not exist"/>
                                 <div class="bottom-right">Bottom Right</div>
                             </div>
                             <div className="post-content">
