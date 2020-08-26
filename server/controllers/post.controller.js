@@ -1,5 +1,4 @@
 const Post = require('../models/post.model');
-const User = require('../models/user.model');
 
 
 const createPost = async (req, res) => {
@@ -53,12 +52,24 @@ const remove = async (req, res) => {
     }
 };
 
-
+const update = async (req, res) => {
+    try {
+        await Post.update({ _id: req.params.id }, { $set: req.body });
+        res.status(304).json({
+            message: "Post modified!"
+        })
+    } catch (e) {
+        res.status(500).json({
+            message: 'Cannot update post!'
+        })
+    }
+};
 
 
 module.exports = {
     createPost,
     getPosts,
     get,
-    remove
+    remove,
+    update
 };

@@ -13,7 +13,7 @@ const postSchema = mongoose.Schema({
         required: true
     },
     date: {
-        type: Date.now()
+        type: Date
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
