@@ -4,7 +4,7 @@ const Post = require('../models/post.model');
 const createPost = async (req, res) => {
     try {
         const post = await Post.create({
-            title: req.body.name,
+            title: req.body.title,
             image: req.file.path,
             description: req.body.description,
             user: req.user.id

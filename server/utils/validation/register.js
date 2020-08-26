@@ -3,18 +3,19 @@ const isEmpty = require('./isEmpty');
 
 
 module.exports = function validateRegisterInput(data) {
+
     let errors = {};
 
-    data.username = !isEmpty(data.username) ? data.username : '';
+    data.name = !isEmpty(data.name) ? data.name : '';
     data.email = !isEmpty(data.email) ? data.email : '';
     data.password = !isEmpty(data.password) ? data.password : '';
 
 
-    if (!Validator.isLength(data.username, {min: 2, max: 30})) {
+    if (!Validator.isLength(data.name, {min: 2, max: 30})) {
         errors.name = 'Имя должно быть от 2 до 30 символов';
     }
 
-    if (Validator.isEmpty(data.username)) {
+    if (Validator.isEmpty(data.name)) {
         errors.name = 'Имя поля обязательно для заполнения';
     }
 

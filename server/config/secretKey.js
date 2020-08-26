@@ -1,3 +1,3 @@
 module.exports = {
-    jwtSecret: 'test key'
+    jwtSecret: 'secret'
 };
