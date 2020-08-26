@@ -14,6 +14,11 @@ const postSchema = mongoose.Schema({
     },
     date: {
         type: Date.now()
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users',
+        required: true
     }
 });
 
