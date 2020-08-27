@@ -1,5 +1,7 @@
 .create-post {
     background: #627CFF;
+    max-width: 750px;
+    width: 100%;
     padding: 10px 20px;
 }
 .create-post-post {

@@ -1,14 +1,11 @@
 .post-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 0.5em;
-    margin: 20px 70px;
+    display: flex;
+    flex-direction: row;
     max-width: 1100px;
 }
 .post-container > div {
     background-color: transparent;
     color: white;
-    padding: 2em;
     border-radius: 0.5em;
     text-align: center;
 }

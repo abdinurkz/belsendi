@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { getPost, addPost } from '../../store/actions/post.action';
 import PostCard from "./post-card/PostCard";
 import CreatePost from "./post-form/CreatePost";
@@ -15,10 +15,10 @@ const Post = (props) => {
     useEffect(onMount(props), []);
 
     return(
-        <Fragment>
+        <div className="nav">
             <div className="post-container">
                 <div className="posts">
-                    <h2 className="post">MOVIES</h2>
+                    <h2 className="post">POSTS</h2>
                     <CreatePost/>
                     <div className="post-cards">
                         {props.post.map(post => <PostCard post={post} key={post.id}/>)}
@@ -26,7 +26,7 @@ const Post = (props) => {
                 </div>
                 <PopularPosts/>
             </div>
-        </Fragment>
+        </div>
     );
 
 
