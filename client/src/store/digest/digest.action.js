@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { GET_DIGEST } from './types';
+import { GET_DIGEST } from '../types';
 
 
 export const getDigest = () => dispatch => {

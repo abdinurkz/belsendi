@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
-import { register } from '../../../store/actions/auth.action'
+import { register } from '../../../store/user/auth.action'
 import Humans from "../left-side/Humans";
 import "../auth.css"
 

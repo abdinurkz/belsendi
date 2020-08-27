@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getPost, addPost } from '../../store/actions/post.action';
+import { getPost, addPost } from '../../store/post.action';
 import PostCard from "./post-card/PostCard";
 import CreatePost from "./post-form/CreatePost";
 import PopularPosts from "./post-popular/PopularPosts";
@@ -12,7 +12,7 @@ const onMount = props => () => {
 
 const Post = (props) => {
 
-    useEffect(onMount(props), []);
+    // useEffect(onMount(props), []);
 
     return(
         <div className="nav">

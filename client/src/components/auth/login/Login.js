@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink, Redirect } from 'react-router-dom';
-import { login } from '../../../store/actions/auth.action'
+import { login } from '../../../store/user/auth.action'
 import { connect } from 'react-redux'
 import Humans from "../left-side/Humans";
 import '../auth.css'

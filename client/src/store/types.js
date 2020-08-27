@@ -1,5 +1,4 @@
-export const GET_POST = "GET_POST";
-export const ADD_POST = "ADD_POST";
+
 export const GET_DIGEST = "GET_DIGEST";
 export const USER_LOADING = "USER_LOADING";
 export const USER_LOADED = "USER_LOADED";

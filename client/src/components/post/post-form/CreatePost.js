@@ -13,7 +13,7 @@ const CreatePost = (props) => {
         image: null
     });
 
-    const onChange = ({ target }) => setFormData({ [target.name]: target.value });
+    const onChange = (e) => setFormData({ [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
