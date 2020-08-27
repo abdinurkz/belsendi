@@ -6,10 +6,10 @@ const router = Router();
 
 
 router.get('/', isAuth, isAdmin, postController.getPosts);
-router.get('/:id', postController.get);
-router.post('/create', isAuth, isAdmin, upload, postController.createPost);
-router.put('/edit/:id', postController.update);
-router.delete('/delete/:id', postController.update);
+router.get('/:id', isAuth, postController.get);
+router.post('/create', isAuth, upload, postController.createPost);
+router.put('/edit/:id', isAuth, postController.update);
+router.delete('/delete/:id', isAuth, postController.update);
 
 
 module.exports = router;
