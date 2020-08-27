@@ -15,7 +15,7 @@ const postSchema = mongoose.Schema({
     date: {
         type: Date
     },
-    user: {
+    owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users',
         required: true

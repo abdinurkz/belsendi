@@ -10,3 +10,5 @@ const petitionSchema = mongoose.Schema({
         required: true
     }
 });
+
+module.exports = Petition = mongoose.model('petitions', petitionSchema);
