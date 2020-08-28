@@ -12,6 +12,9 @@ const commentSchema = mongoose.Schema({
     post: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'posts'
+    },
+    date: {
+        type: Date
     }
 });
 
