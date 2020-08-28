@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getPost, addPost } from '../../store/post.action';
+import { getPosts } from "../../store/post/post.action"
 import PostCard from "./post-card/PostCard";
 import CreatePost from "./post-form/CreatePost";
 import PopularPosts from "./post-popular/PopularPosts";
@@ -7,12 +7,14 @@ import { connect } from 'react-redux'
 import './Post.css'
 
 const onMount = props => () => {
-    props.getPost();
+    props.getPosts();
 };
 
 const Post = (props) => {
 
-    // useEffect(onMount(props), []);
+    useEffect(onMount(props), []);
+
+    console.log(props.posts);
 
     return(
         <div className="nav">
@@ -21,7 +23,7 @@ const Post = (props) => {
                     <h2 className="post">POSTS</h2>
                     <CreatePost/>
                     <div className="post-cards">
-                        {props.post.map(post => <PostCard post={post} key={post.id}/>)}
+                        {/*{props.post.map(post => <PostCard post={post} key={post.id}/>)}*/}
                     </div>
                 </div>
                 <PopularPosts/>
@@ -33,8 +35,8 @@ const Post = (props) => {
 };
 
 const mapStateToProps = state => ({
-    post: state.post.post
+    posts: state.post.posts
 });
 
 
-export default connect(mapStateToProps, { getPost, addPost })(Post);
+export default connect(mapStateToProps, { getPosts })(Post);

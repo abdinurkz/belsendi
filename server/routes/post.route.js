@@ -5,7 +5,7 @@ const { Router } = require('express');
 const router = Router();
 
 
-router.get('/', isAuth, isAdmin, postController.getPosts);
+router.get('/', postController.getPosts);
 router.get('/:id', isAuth, postController.get);
 router.post('/create', isAuth, upload, postController.createPost);
 router.put('/edit/:id', isAuth, postController.update);
