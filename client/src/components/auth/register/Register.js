@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
 import { register } from '../../../store/user/auth.action'
-import Humans from "../left-side/Humans";
+import AuthContent from "../right-side/AuthContent";
 import "../auth.css"
 
 const Register = (props) => {
@@ -37,28 +37,27 @@ const Register = (props) => {
     const { username, email, password, password2 } = state;
 
     return (
-        <div className="container">
-            <Humans/>
-            <div className="right-side">
-                <h2 className="title">WELCOME, <b>BELSENDI!</b></h2>
-                <form className="login-fields" onSubmit={onSubmit}>
-                    <h3 className="login-text">Registration</h3>
-                    <input type="text" placeholder="Username" className="text-field" name="username" onChange={onChange} value={username} onfocus="this.value=''"/>
-                    <input type="text" placeholder="Email" className="text-field" name="email" onChange={onChange} value={email} onfocus="this.value=''" id="password"/>
-                    <input type="password" placeholder="Password (at least 8 characters)" className="text-field" name="password" onChange={onChange} value={password} onfocus="this.value=''" id="password"/>
-                    <input type="password" placeholder="Repeat your password" className="text-field" name="password2" onChange={onChange} value={password2} onfocus="this.value=''" id="password"/>
-                    <div className="buttons-sign-up">
-                        <button id="sign-in" type="submit">Sign Up</button>
-                    </div>
-                </form>
-                <label className="policy">Privacy Policy</label>
-            </div>
-        </div>
+        <AuthContent>
+            <form className="login-fields" onSubmit={onSubmit}>
+                <h3 className="login-text">Registration</h3>
+                <input type="text" placeholder="Username" className="text-field" name="username" onChange={onChange}
+                       value={username} onFocus="this.value=''"/>
+                <input type="text" placeholder="Email" className="text-field" name="email" onChange={onChange}
+                       value={email} onFocus="this.value=''" id="password"/>
+                <input type="password" placeholder="Password (at least 8 characters)" className="text-field"
+                       name="password" onChange={onChange} value={password} onFocus="this.value=''" id="password"/>
+                <input type="password" placeholder="Repeat your password" className="text-field" name="password2"
+                       onChange={onChange} value={password2} onFocus="this.value=''" id="password"/>
+                <div className="buttons-sign-up">
+                    <button id="sign-in" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </AuthContent>
     )
 };
 
-const mapStateToProps = state => ({
-    isAuthenticated: state.auth.isAuthenticated
-});
+// const mapStateToProps = state => ({
+//     isAuthenticated: state.auth.isAuthenticated
+// });
 
-export default connect(mapStateToProps, { register })(Register);
+export default connect(null, { register })(Register);

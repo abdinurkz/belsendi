@@ -7,6 +7,7 @@ import PostsPage from "./pages/Posts";
 import Login from "./components/auth/login/Login";
 import Register from "./components/auth/register/Register";
 import FavoritesPage from "./pages/Favorites";
+import Digest from "./components/digest/Digest";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                   <Route path="/login" component={Login}/>
                   <Route path="/register" component={Register}/>
                   <Route path="/favorites" component={FavoritesPage}/>
+                  <Route path="/digests" component={Digest}/>
               </Switch>
           </Provider>
       </BrowserRouter>

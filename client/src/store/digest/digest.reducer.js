@@ -1,17 +1,21 @@
-import { GET_DIGEST } from '../types'
+import * as types from "./digest.types";
 
 const initialState = {
-    digest: []
+    digests: [],
+    digest: {}
 };
 
 
 export default function(state = initialState, action) {
+    const { payload } = action;
     switch(action.type) {
-        case GET_DIGEST:
+        case types.GET_DIGESTS_SUCCESS:
             return {
                 ...state,
-                digest: action.payload
+                digests: payload
             };
+        case types.GET_DIGESTS_FAILURE:
+            return { ...state, error: payload.status };
         default:
             return state;
     }

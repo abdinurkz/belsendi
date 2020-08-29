@@ -7,6 +7,7 @@ const cors = require('cors');
 const { auth } = require('./middlewares/auth');
 const postRoutes = require('./routes/post.route');
 const userRoutes = require('./routes/user.route');
+const digestRoutes = require('./routes/digest.route');
 const { mongoDB } = require('./config/database');
 const app = express();
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use(auth);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/digests', digestRoutes);
 
 
 

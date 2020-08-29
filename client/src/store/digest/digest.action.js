@@ -1,16 +1,11 @@
-import axios from 'axios';
+import * as types from "./digest.types";
 
-import { GET_DIGEST } from '../types';
+export const getDigests = payload => ({
+    type: types.GET_DIGESTS,
+    payload
+});
 
-
-export const getDigest = () => dispatch => {
-    axios
-        .get('/api/digest/')
-        .then(res => {
-            dispatch({
-                type: GET_DIGEST,
-                payload: res.data
-            });
-        })
-        .catch(err => console.log(err));
-};
+export const getDigest = payload => ({
+    type: types.GET_DIGEST,
+    payload
+});
