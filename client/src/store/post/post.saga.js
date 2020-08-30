@@ -12,7 +12,7 @@ function* getPosts(action) {
     } catch (e) {
         return yield put ({
             type: types.GET_POSTS_FAILURE,
-            payload: error.response
+            payload: e.response
         })
     }
 }

@@ -3,7 +3,7 @@ import { host } from "../local";
 
 
 const api = axios.create({
-    baseURL: host + '/api'
+    baseURL: host
 });
 
 export default api

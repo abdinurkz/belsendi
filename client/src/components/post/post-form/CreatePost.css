@@ -1,72 +1,63 @@
-.create-post {
+.postForm {
+    display: flex;
+    flex-direction: column;
     background: #627CFF;
-    max-width: 750px;
-    width: 100%;
     padding: 10px 20px;
+    min-width: 750px;
+    min-height: 60px;
+    width: 100%;
+    transition: max-height 3s ease-in;
 }
-.create-post-post {
+.postForm .postForm_initial {
     display: flex;
-    justify-content: space-around;
-}
-
-.profile {
-    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 40px;
     align-items: center;
-    margin-right: 440px;
 }
-
-#input-post {
-    border: none;
+.postForm__title .postTitle {
+    margin-left: 10px;
+    padding: 0;
+    color: #fff;
     background: none;
-    color: white;
-    width: 170px;
-    height: 22px;
-    line-height: 22px;
-    margin: 0;
+    max-width: 350px;
+    border: none;
 }
-#input-post::placeholder {
-    color: white;
-    font-size: 16px;
-}
-.icons {
+.postForm__title {
     display: flex;
     align-items: center;
 }
-#publish {
-    padding: 7px 30px;
-    font-size: 16px;
-    background: #ffffff;
-}
-#publish:hover {
-    background: #e5e5e5;
-}
-.button-field {
+.postForm_initial .postForm__icons {
     display: flex;
     justify-content: space-between;
+    flex: 0.1;
 }
-
-#input-post-description {
+.postForm_expand {
+    display: flex;
+    flex-direction: column;
+}
+.postForm_expand .postDescription {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Proxima Nova", sans-serif;
+    margin-left: 34px;
+    padding: 0;
     background: none;
     border: none;
-    margin: 0 0 0 53px;
-    height: 60px;
-    padding: 0;
-    font-size: 16px;
-    width: 660px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
 }
-
-.text-area {
-    margin-bottom: 10px;
+.postForm__upload {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
 }
-
-#clip {
-    transform: rotate(40deg)
+.postForm__upload .postSubmit {
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 9px 41px;
+    cursor: pointer;
 }
-#smile {
-    margin-right: 10px;
-}
-#file {
+.none {
     display: none;
 }
-

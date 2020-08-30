@@ -2,7 +2,7 @@ import * as types from "./post.types";
 
 const initialState = {
     posts: [],
-    post: {},
+    post: {}
 };
 
 export default function (state = initialState, action) {
@@ -14,7 +14,7 @@ export default function (state = initialState, action) {
                 posts: payload
             };
         case types.GET_POSTS_FAILURE:
-            return { ...state, error: payload.status };
+            return { ...state, error: payload };
         default:
             return { ...state }
     }

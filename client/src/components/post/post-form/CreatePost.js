@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import Profile from "../../../assets/images/profile.svg";
-import Smile from "../../../assets/images/smile.svg";
-import Clip from "../../../assets/images/clip.svg";
+import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import "./CreatePost.css"
 
 
@@ -30,29 +30,26 @@ const CreatePost = (props) => {
         });
     };
 
+    const [expand, setExpand] = useState(false);
+
 
     return (
-        <form className="create-post" onSubmit={onSubmit}>
-            <div className="create-post-post">
-                <div className="profile">
-                    <img src={Profile} className="ellipse" alt="Not Found"/>
-                    <input type="text" placeholder="Recommend movie" id="input-post" name="title" onChange={onChange} value={formData.title}/>
+        <form className="postForm" onSubmit={onSubmit}>
+            <div className="postForm_initial">
+                <div className="postForm__title">
+                    <AccountCircleIcon/>
+                    <input type="text" placeholder="Create your post" className="postTitle" onClick={() => setExpand(!expand)}/>
                 </div>
-                <div className="icons">
-                    <img src={Smile} id="smile" alt="Not Found"/>
-                    <img src={Clip} alt="Not Found"/>
+                <div className="postForm__icons">
+                    <EmojiEmotionsIcon/>
+                    <AttachFileIcon/>
                 </div>
             </div>
-            <div className="publish">
-                <div className="text-area">
-                    <input type="text" id="input-post-description" name="description" onChange={onChange} value={formData.description}/>
-                </div>
-                <div className="button-field">
-                    <label>
-                        <img src={Clip} id="clip" alt="Not Found"/>
-                        <input type="file" id="file" name="image"  accept="image/gif,image/jpeg,image/jpg,image/png" multiple="" data-original-title="upload photos" onChange={handleImageChange}/>
-                    </label>
-                    <button type="submit" name="submit-post" id="publish">Publish</button>
+            <div className={expand ? "postForm_expand" : 'none'}>
+                <textarea type="text" className="postDescription" name={formData.description}/>
+                <div className="postForm__upload">
+                    <AttachFileIcon onClick={handleImageChange}/>
+                    <button className="postSubmit" type="submit">Publish</button>
                 </div>
             </div>
         </form>

@@ -14,16 +14,15 @@ const Post = (props) => {
 
     useEffect(onMount(props), []);
 
-    console.log(props.posts);
-
+    console.log(props.posts)
     return(
-        <div className="nav">
+        <div className="posts">
             <div className="post-container">
                 <div className="posts">
                     <h2 className="post">POSTS</h2>
                     <CreatePost/>
                     <div className="post-cards">
-                        {/*{props.post.map(post => <PostCard post={post} key={post.id}/>)}*/}
+                        {props.posts.map(post => <PostCard post={post} key={post._id}/>)}
                     </div>
                 </div>
                 <PopularPosts/>

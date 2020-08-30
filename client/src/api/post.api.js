@@ -1,7 +1,7 @@
 import api from "./api";
 
 const postApi = {
-    getPosts: params => api.get('/posts', {
+    getPosts: params => api.get('/api/posts', {
         params
     }),
     get: params => api.get('post', {

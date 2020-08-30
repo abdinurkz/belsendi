@@ -7,9 +7,9 @@ const createPost = async (req, res) => {
             title: req.body.title,
             image: req.file.path,
             description: req.body.description,
-            user: req.user.id
+            owner: req.user.id
         });
-        res.status(201).json({ post })
+        res.status(201).json(post)
     } catch (e) {
         res.status(500).json({
             message: 'Cannot create post!'
@@ -41,7 +41,7 @@ const get = async (req, res) => {
 
 const remove = async (req, res) => {
     try {
-        await Post.deleteOne(+req.params.id);
+        await Post.deleteOne({ _id: req.params.id });
         res.status(204).json({
             message: "Post deleted!"
         })

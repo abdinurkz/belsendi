@@ -18,7 +18,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, 'public/uploads')));
 app.get('/', (req, res) => {
     res.send('Belsendi server app');
 });
@@ -26,6 +25,17 @@ app.use(auth);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/digests', digestRoutes);
+app.use('/uploads', express.static('uploads'));
+app.use((req, res, next) => {
+    const error = new Error('Not found!');
+    error.status = 404;
+    next(error);
+});
+app.use(function (err, req, res, next) {
+    console.error(err.message);
+    if (!err.statusCode) err.statusCode = 500;
+    res.status(err.statusCode).send(err.message);
+});
 
 
 

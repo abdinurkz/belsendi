@@ -3,15 +3,15 @@ import Like from "../../../assets/images/like.svg";
 import Comment from "../../../assets/images/comment.svg";
 import "./PostCard.css"
 
-const PostCard = ({ image, title, description, owner, date }) => {
+const PostCard = ({ post }) => {
     return (
         <div className="post-card">
             <div className="post-image">
-                <img src={image} alt="sorry"/>
+                <img src={`${process.env.PUBLIC_URL}/${post.image}`} alt="sorry"/>
             </div>
             <div className="post-content">
-                <h2 className="post-title">{title}</h2>
-                <p className="post-description">{description}</p>
+                <h2 className="post-title">{post.title}</h2>
+                <p className="post-description">{post.description}</p>
                 <div className="post-detail">
                     <div className="rate">
                         <div className="like">
@@ -24,7 +24,7 @@ const PostCard = ({ image, title, description, owner, date }) => {
                         </div>
                     </div>
                     <div className="author-field">
-                        <p className="author">{owner} - {date}</p>
+                        <p className="author">{post.owner} - {post.date}</p>
                     </div>
                 </div>
             </div>

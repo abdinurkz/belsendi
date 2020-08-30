@@ -1,17 +1,34 @@
 import { createStore, applyMiddleware } from 'redux';
+import throttle from 'lodash/throttle'
+import createSagaMiddleware from 'redux-saga'
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from './reducer';
-import thunk from 'redux-thunk';
+import sagas from "./sagas";
+import reducers from './reducer'
+import { env } from "../local"
 
-const initialState = {};
+const sagaMiddleware = createSagaMiddleware();
+let middleware;
 
-const middleWare = [thunk];
+if (env === 'dev') {
+    middleware = composeWithDevTools(
+        applyMiddleware(sagaMiddleware),
+    )
+} else {
+    middleware = applyMiddleware(sagaMiddleware)
+}
 
-const store = createStore(
-    rootReducer,
-    initialState,
-    composeWithDevTools(applyMiddleware(...middleWare))
-);
+const initialState = localStorage.getItem('redux_state') ? JSON.parse(localStorage.getItem('redux_state')) : {};
+
+
+
+
+const store = createStore(reducers, initialState, middleware);
+
+sagas.forEach(saga => sagaMiddleware.run(saga));
+
+store.subscribe(throttle(() => localStorage.setItem('redux_state', JSON.stringify(store.getState())), 100))
+
+
 
 export default store;
 
