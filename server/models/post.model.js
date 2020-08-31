@@ -15,10 +15,17 @@ const postSchema = mongoose.Schema({
     date: {
         type: Date
     },
-    owner: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users',
         required: true
+    },
+    like: {
+        type: Number
+    },
+    comment: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'comments'
     }
 });
 

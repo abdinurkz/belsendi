@@ -7,7 +7,7 @@ const createPost = async (req, res) => {
             title: req.body.title,
             image: req.file.path,
             description: req.body.description,
-            owner: req.user.id
+            user: req.user.id
         });
         res.status(201).json(post)
     } catch (e) {
@@ -19,7 +19,10 @@ const createPost = async (req, res) => {
 
 const getPosts = async (req, res) => {
     try {
-        const posts = await Post.find().exec();
+        const posts =
+            await Post
+            .find()
+                .populate('user', 'name').populate('comment', 'body');
         res.status(200).json(posts);
     } catch (e) {
         res.status(500).json({

@@ -24,7 +24,7 @@ const PostCard = ({ post }) => {
                         </div>
                     </div>
                     <div className="author-field">
-                        <p className="author">{post.owner} - {post.date}</p>
+                        <p className="author">{post.user.name} - {post.date}</p>
                     </div>
                 </div>
             </div>
