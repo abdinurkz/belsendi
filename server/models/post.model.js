@@ -12,21 +12,17 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
-        type: Date
-    },
+    date: { type: Date, default: Date.now },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users',
-        required: true
+        required: true,
+        alias: 'owner'
     },
     like: {
         type: Number
     },
-    comment: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'comments'
-    }
+    comments: [{ body: String, date: Date }]
 });
 
 
