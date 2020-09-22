@@ -3,19 +3,20 @@ import { getDigests } from '../../store/digest/digest.action';
 import { connect } from 'react-redux'
 import "./Digest.css"
 
-const Digest = (props) => {
+const Digest = ({getDigests, digests}) => {
 
 
    useEffect(() => {
-       props.getDigests();
-   }, []);
+       getDigests();
+   }, [getDigests]);
+
 
     return (
         <div className="digest-container">
             <h2 className="digest-title">TRENDING NEWS</h2>
             <div className="digest">
-                {props.digest.map(digest =>(
-                    <div className="main" key={digest.id}>
+                {digests.map((digest, index) =>(
+                    <div className="main" key={index}>
                         <div className="digest-image">
                             <img src={digest.image} alt="Does not exist"/>
                         </div>
@@ -50,7 +51,7 @@ const Digest = (props) => {
 };
 
 const mapStateToProps = state => ({
-    digest: state.digest.digest
+    digests: state.digest.digests
 });
 
 export default connect(mapStateToProps, { getDigests })(Digest)

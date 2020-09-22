@@ -38,7 +38,13 @@ const CreatePost = (props) => {
             <div className="postForm_initial">
                 <div className="postForm__title">
                     <AccountCircleIcon/>
-                    <input type="text" placeholder="Create your post" className="postTitle" onClick={() => setExpand(!expand)}/>
+                    <input
+                        type="text"
+                        placeholder="Create your post"
+                        className="postTitle"
+                        onClick={() => setExpand(!expand)}
+                        onChange={onChange}
+                    />
                 </div>
                 <div className="postForm__icons">
                     <EmojiEmotionsIcon/>

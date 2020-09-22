@@ -1,4 +1,4 @@
-import { takeEvery, put, call, takeLatest } from "redux-saga/effects";
+import { takeEvery, put, call } from "redux-saga/effects";
 import * as types from "./digest.types";
 import digestApi from "../../api/digest.api";
 
@@ -13,7 +13,7 @@ function* getDigests(action) {
     } catch (e) {
         return yield put ({
             type: types.GET_DIGESTS_FAILURE,
-            payload: error.response
+            payload: e.response
         })
     }
 }

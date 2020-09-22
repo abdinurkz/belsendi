@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { login } from '../../../store/user/auth.action'
 import { connect } from 'react-redux'
 import '../auth.css'

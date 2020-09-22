@@ -5,7 +5,7 @@ const { Router } = require('express');
 const router = Router();
 
 
-router.get('/', isAuth, isAdmin, digestController.getDigests);
+router.get('/', digestController.getDigests);
 router.get('/:id', isAuth, isAdmin, digestController.get);
 router.post('/create', isAuth, isAdmin, upload, digestController.createDigest);
 router.put('/edit/:id', isAuth, isAdmin, digestController.update);

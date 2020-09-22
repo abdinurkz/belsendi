@@ -1,18 +1,18 @@
 import React from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Post from "../containers/post/Post";
+import Digest from "../containers/digest/Digest";
 
 
-const PostsPage = () => {
+const DigestsPage = () => {
     return (
         <div className="page">
             <Header/>
-            <Post/>
+            <Digest/>
             <Footer/>
         </div>
     )
 };
 
 
-export default PostsPage
+export default DigestsPage

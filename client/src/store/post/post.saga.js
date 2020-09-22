@@ -1,4 +1,4 @@
-import { takeEvery, put, call, takeLatest } from "redux-saga/effects";
+import { takeEvery, put, call } from "redux-saga/effects";
 import * as types from "./post.types";
 import postApi from "../../api/post.api";
 

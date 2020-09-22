@@ -1,18 +1,18 @@
 import React from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import Post from "../containers/post/Post";
+import Survey from "../containers/survey/Survey";
 
 
-const PostsPage = () => {
+const SurveysPage = () => {
     return (
         <div className="page">
             <Header/>
-            <Post/>
+            <Survey/>
             <Footer/>
         </div>
     )
 };
 
 
-export default PostsPage
+export default SurveysPage
