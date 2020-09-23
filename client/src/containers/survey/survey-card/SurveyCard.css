@@ -1,0 +1,7 @@
+.survey-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 270px;
+    height: 340px;
+}

@@ -7,7 +7,7 @@ const PostCard = ({ post }) => {
     return (
         <div className="post-card">
             <div className="post-image">
-                <img src={`${process.env.PUBLIC_URL}/${post.image}`} alt="sorry"/>
+                <img src={`${post.image}`} alt="sorry"/>
             </div>
             <div className="post-content">
                 <h2 className="post-title">{post.title}</h2>

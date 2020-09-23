@@ -12,9 +12,9 @@ const onMount = props => () => {
 
 const Post = (props) => {
 
+    const { posts } = props;
     useEffect(onMount(props), []);
 
-    console.log(props.posts)
     return(
         <div className="posts">
             <div className="post-container">
@@ -22,7 +22,7 @@ const Post = (props) => {
                     <h2 className="post">POSTS</h2>
                     <CreatePost/>
                     <div className="post-cards">
-                        {props.posts.map(post => <PostCard post={post} key={post._id}/>)}
+                        {posts.map(post => <PostCard post={post} key={post._id}/>)}
                     </div>
                 </div>
                 <PopularPosts/>
