@@ -10,6 +10,7 @@ import FavoritesPage from "./pages/Favorites";
 import DigestsPage from "./pages/Digests";
 import SurveysPage from "./pages/Surveys";
 import PetitionsPage from "./pages/Petitions";
+import SurveyDetail from "./containers/survey/survey-detail/SurveyDetail";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                   <Route path="/surveys" component={SurveysPage}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/register" component={Register}/>
+                  <Route path="/survey/:id" component={SurveyDetail}/>
               </Switch>
           </Provider>
       </BrowserRouter>

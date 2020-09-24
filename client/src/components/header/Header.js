@@ -13,7 +13,7 @@ const Header = (props) => {
                     <li><NavLink exact to="/posts">POSTS</NavLink></li>
                     <li><NavLink to="/digests">DIGESTS</NavLink></li>
                     <li><NavLink to="/surveys">SURVEYS</NavLink></li>
-                    <li><NavLink to="/petitions">PETITIONS</NavLink></li>
+                    <li><NavLink to="/favorites">FAVORITES</NavLink></li>
                 </ul>
                 <NavLink to="/login" className="login">SIGN IN</NavLink>
             </nav>

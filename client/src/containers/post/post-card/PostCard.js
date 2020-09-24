@@ -5,7 +5,7 @@ import "./PostCard.css"
 
 const PostCard = ({ post }) => {
     return (
-        <div className="post-card">
+        <article className="post-card">
             <div className="post-image">
                 <img src={`${post.image}`} alt="sorry"/>
             </div>
@@ -28,7 +28,7 @@ const PostCard = ({ post }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 };
 
