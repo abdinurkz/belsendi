@@ -1,67 +1,59 @@
-.post-card {
+.post_card {
     display: grid;
+    max-width: 750px;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 1.2em;
-    margin-top: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
-    padding: 10px;
-    cursor: pointer;
     background-color: #ffffff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    margin: 10px 0;
+    cursor: pointer;
 }
-.post-image img {
+.post_image {
+    max-height: 180px;
+}
+.post_image img {
     flex: 1;
     object-fit: cover;
     width: 250px;
-    height: 160px;
+    height: 180px;
 }
-.post-title {
+.post_content {
+    padding: 10px 20px;
+}
+.post_title {
     text-align: left;
     color: #5C4DE8;
     font-size: 18px;
-    margin-top: 0;
+    margin: 0;
 }
-.post-description {
+.post_description {
     text-align: left;
     color: #000000;
     font-size: 14px;
-    height: 70px;
-    margin-bottom: 25px;
+    height: 85px;
+    margin: 10px 0 20px 0;
     overflow: hidden;
 }
-.post-detail {
+.post_details {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
     color: #000000;
-    display: flex;
     margin-bottom: 0;
+}
+.post_author {
+    flex: 0.8;
+    text-align: left;
+    font-size: 14px;
+    margin: 0;
+}
+.post_rate {
+    flex: 0.2;
+    display: flex;
     justify-content: space-between;
 }
-.post-detail > p {
-    margin: 0;
-    text-align: right;
-    display: flex;
-}
-.rate {
-    display: flex;
+.post_like, .post_comment {
+    display: inherit;
+    align-items: center;
     justify-content: space-between;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-left: 140px;
-}
-.like {
-    margin-left: 30px;
-    margin-right: 15px;
-}
-.like img {
-    display: inline-block;
-    vertical-align: middle;
-}
-.comment img {
-    vertical-align: middle;
-}
-.author-field {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: right;
-}
-.author {
-    margin: 0;
+    flex: 0.4;
 }
