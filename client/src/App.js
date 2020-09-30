@@ -11,6 +11,7 @@ import DigestsPage from "./pages/Digests";
 import SurveysPage from "./pages/Surveys";
 import PetitionsPage from "./pages/Petitions";
 import SurveyDetail from "./containers/survey/survey-detail/SurveyDetail";
+import PostDetail from "./containers/post/post-detail/PostDetail";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Switch>
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/posts" component={PostsPage}/>
+                  <Route path="/post/:id" component={PostDetail}/>
                   <Route path="/favorites" component={FavoritesPage}/>
                   <Route path="/digests" component={DigestsPage}/>
                   <Route path="/petitions" component={PetitionsPage}/>

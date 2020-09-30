@@ -16,3 +16,6 @@
     bottom: 8px;
     right: 16px;
 }
+.post_cards a {
+    text-decoration: none;
+}
