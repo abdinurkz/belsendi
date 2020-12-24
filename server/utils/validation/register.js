@@ -9,6 +9,7 @@ module.exports = function validateRegisterInput(data) {
     data.name = !isEmpty(data.name) ? data.name : '';
     data.email = !isEmpty(data.email) ? data.email : '';
     data.password = !isEmpty(data.password) ? data.password : '';
+    data.phone = !isEmpty(data.password) ? data.phone : '';
 
 
     if (!Validator.isLength(data.name, {min: 2, max: 30})) {
@@ -34,6 +35,11 @@ module.exports = function validateRegisterInput(data) {
     if (!Validator.isLength(data.password, {min: 6, max: 30})) {
         errors.password = 'Пароль должен содержать не менее 6 символов';
     }
+
+    if (Validator.isEmpty(data.phone)) {
+        errors.password = 'Телефон пароля обязательно для заполнения';
+    }
+
 
 
     return {

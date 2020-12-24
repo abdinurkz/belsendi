@@ -110,7 +110,7 @@ exports.current = async function (req, res) {
         });
     } catch (e) {
         await res.status(500).json({
-            message: 'Cannot fetch current user!'
+            message: 'Cannot fetch current auth!'
         })
     }
 };
