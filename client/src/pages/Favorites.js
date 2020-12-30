@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {Favorites} from "../containers/favorites/Favorites";
+import {Favorites} from "../containers/Favorites";
 
 const FavoritesPage = () => {
     return (

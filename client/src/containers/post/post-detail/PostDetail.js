@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import Like from "../../../assets/images/like.svg";
-import logo from "./image 66.png"
-import ava from "./ava.svg"
+import logo from "../assets/image 66.png"
+import ava from "../assets/ava.svg"
 import "./PostDetail.css"
 
 

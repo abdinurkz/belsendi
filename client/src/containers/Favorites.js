@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Like from '../../assets/images/like.svg'
-import Comment from '../../assets/images/comment.svg'
+import Like from '../assets/images/like.svg'
+import Comment from '../assets/images/comment.svg'
 import { withRouter } from 'react-router-dom'
-import "./Favorites.css"
 
 
 export class Favorites extends Component {

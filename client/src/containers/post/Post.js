@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import PostCard from "./post-card/PostCard";
+import PostCard from "./PostCard";
 import CreatePost from "./post-form/CreatePost";
 import PopularPosts from "./post-popular/PopularPosts";
 import { getPosts } from "../../store/post/post.action"
@@ -23,8 +23,8 @@ const Post = (props) => {
                     <h2 className="post">POSTS</h2>
                     <CreatePost/>
                     <div className="post_cards">
-                        {posts.map(post =>
-                            <Link to="post/:id">
+                        {posts.map((post, i) =>
+                            <Link to="post/:id" key={i}>
                                 <PostCard post={post} key={post._id}/>
                             </Link>
                         )}
