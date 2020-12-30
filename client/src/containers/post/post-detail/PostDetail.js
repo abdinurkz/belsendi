@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../../components/header/Header";
-import Footer from "../../../components/footer/Footer";
+import Header from "../../../components/Header";
+import Footer from "../../../components/Footer";
 import Like from "../../../assets/images/like.svg";
 import logo from "./image 66.png"
 import ava from "./ava.svg"

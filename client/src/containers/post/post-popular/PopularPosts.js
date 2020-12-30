@@ -1,7 +1,7 @@
 import React from "react";
 import Like from "../../../assets/images/like.svg";
 import Comment from "../../../assets/images/comment.svg";
-import Section from "../../../components/section/Section";
+import Section from "../../../components/Section";
 import "./PopularPosts.css"
 
 const PopularPosts = () => {

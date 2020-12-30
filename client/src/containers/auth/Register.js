@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux'
-import { register } from '../../../store/auth/auth.action'
-import AuthContent from "../right-side/AuthContent";
-import "../auth.css"
+import { register } from '../../store/auth/auth.action'
+import AuthContent from "./AuthContent";
+import "./auth.css"
 
 const Register = (props) => {
 
@@ -27,7 +27,6 @@ const Register = (props) => {
                 email,
                 phone,
             };
-            console.log(newUser)
             props.register(newUser);
         }
     };
@@ -39,7 +38,7 @@ const Register = (props) => {
         })
     }
 
-    if(props.isAuthenticated) {
+    if (props.isAuthenticated) {
         return <Redirect to="/" />;
     }
     const { name, email, password, phone, password2 } = state;

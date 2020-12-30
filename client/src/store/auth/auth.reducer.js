@@ -1,5 +1,4 @@
 import {
-    USER_LOADING,
     USER_LOADED,
     AUTH_ERROR,
     LOGIN_SUCCESS,
@@ -19,11 +18,6 @@ const initialState = {
 
 export default function(state = initialState, action){
     switch (action.type) {
-        case USER_LOADING:
-            return {
-                ...state,
-                isLoading: true
-            };
         case USER_LOADED:
             return {
                 ...state,
