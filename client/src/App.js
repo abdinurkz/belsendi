@@ -6,12 +6,11 @@ import HomePage from "./pages/Home";
 import PostsPage from "./pages/Posts";
 import Login from "./containers/auth/Login";
 import Register from "./containers/auth/Register";
-import FavoritesPage from "./pages/Favorites";
 import DigestsPage from "./pages/Digests";
 import SurveysPage from "./pages/Surveys";
 import PetitionsPage from "./pages/Petitions";
 import SurveyDetail from "./containers/survey/survey-detail/SurveyDetail";
-import PostDetail from "./containers/post/post-detail/PostDetail";
+import PostDetail from "./containers/post/PostDetail";
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/posts" component={PostsPage}/>
                   <Route path="/post/:id" component={PostDetail}/>
-                  <Route path="/favorites" component={FavoritesPage}/>
                   <Route path="/digests" component={DigestsPage}/>
                   <Route path="/petitions" component={PetitionsPage}/>
                   <Route path="/surveys" component={SurveysPage}/>

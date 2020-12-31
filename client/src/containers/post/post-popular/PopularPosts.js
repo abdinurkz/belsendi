@@ -2,13 +2,21 @@ import React from "react";
 import Like from "../../../assets/images/like.svg";
 import Comment from "../../../assets/images/comment.svg";
 import Section from "../../../components/Section";
+import styled from 'styled-components'
 import "./PopularPosts.css"
+
+const StyledPopularPosts = styled.div`
+    width: 360px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    color: black;
+`
 
 const PopularPosts = () => {
     return (
         <div className="popular">
             <Section title="POPULAR POSTS"/>
-            <div className="popular-posts">
+            <StyledPopularPosts>
                 <div className="popular-post">
                     <div className="popular-post-image"/>
                     <div className="popular-post-content">
@@ -70,7 +78,7 @@ const PopularPosts = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </StyledPopularPosts>
         </div>
     )
 };

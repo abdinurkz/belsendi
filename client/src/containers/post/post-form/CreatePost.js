@@ -2,8 +2,15 @@ import React, {useState} from "react";
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import styled from 'styled-components'
 import "./CreatePost.css"
 
+
+const PostFormIcons = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex: 0.1;
+`
 
 const CreatePost = (props) => {
 
@@ -46,10 +53,10 @@ const CreatePost = (props) => {
                         onChange={onChange}
                     />
                 </div>
-                <div className="postForm__icons">
+                <PostFormIcons>
                     <EmojiEmotionsIcon/>
                     <AttachFileIcon/>
-                </div>
+                </PostFormIcons>
             </div>
             <div className={expand ? "postForm_expand" : 'none'}>
                 <textarea type="text" className="postDescription" name={formData.description}/>

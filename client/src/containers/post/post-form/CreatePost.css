@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
 }
-.postForm_initial .postForm__icons {
+.postForm_initial {
     display: flex;
     justify-content: space-between;
     flex: 0.1;
@@ -46,11 +46,7 @@
     border: none;
     border-bottom: 1px solid #fff;
 }
-.postForm__upload {
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-between;
-}
+
 .postForm__upload .postSubmit {
     background: none;
     color: #fff;

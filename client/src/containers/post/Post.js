@@ -3,13 +3,29 @@ import PostCard from "./PostCard";
 import CreatePost from "./post-form/CreatePost";
 import PopularPosts from "./post-popular/PopularPosts";
 import { getPosts } from "../../store/post/post.action"
+import Section from "../../components/Section";
 import {Link} from "react-router-dom";
 import { connect } from 'react-redux'
-import './Post.css'
+import styled from 'styled-components'
 
 const onMount = props => () => {
     props.getPosts();
 };
+
+const PostContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 1140px;
+    margin: 0 auto;
+    
+    > div {
+        background-color: transparent;
+        color: white;
+        border-radius: 0.5em;
+        text-align: center;
+    }
+`
 
 const Post = (props) => {
 
@@ -18,9 +34,9 @@ const Post = (props) => {
 
     return(
         <div className="posts">
-            <div className="post-container">
+            <PostContainer>
                 <div className="posts">
-                    <h2 className="post">POSTS</h2>
+                    <Section title="POSTS"/>
                     <CreatePost/>
                     <div className="post_cards">
                         {posts.map((post, i) =>
@@ -31,7 +47,7 @@ const Post = (props) => {
                     </div>
                 </div>
                 <PopularPosts/>
-            </div>
+            </PostContainer>
         </div>
     );
 
