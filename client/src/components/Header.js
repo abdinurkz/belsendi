@@ -37,6 +37,17 @@ const StyledNav = styled.nav`
         text-decoration: none;
         color: #fff;
     }
+    
+    .login {
+        border: 1px solid #fff;
+        padding: 4px 8px;
+    }
+    
+    .login:hover {
+        background: #fff;
+        color: #627CFF;
+        transition: 3ms background ease-in-out;
+    }
 `
 
 const Header = (props) => {
@@ -55,10 +66,9 @@ const Header = (props) => {
                     <Link to="/">BELSENDI</Link>
                 </h4>
                 <ul className="list">
-                    <li><NavLink exact to="/posts">POSTS</NavLink></li>
                     <li><NavLink to="/digests">DIGESTS</NavLink></li>
                     <li><NavLink to="/surveys">SURVEYS</NavLink></li>
-                    <li><NavLink to="/favorites">FAVORITES</NavLink></li>
+                    <li><NavLink to="/interests">INTERESTS</NavLink></li>
                 </ul>
                 { props.isAuthenticated ? null : <NavLink to="/login" className="login">SIGN IN</NavLink> }
 

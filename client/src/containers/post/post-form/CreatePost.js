@@ -20,7 +20,7 @@ const CreatePost = (props) => {
         image: null
     });
 
-    const onChange = (e) => setFormData({ [e.target.name]: e.target.value });
+    const onChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
     const onSubmit = e => {
         e.preventDefault();
@@ -33,6 +33,7 @@ const CreatePost = (props) => {
 
     const handleImageChange = (e) => {
         setFormData({
+            ...formData,
             image: e.target.files[0]
         });
     };
@@ -59,7 +60,7 @@ const CreatePost = (props) => {
                 </PostFormIcons>
             </div>
             <div className={expand ? "postForm_expand" : 'none'}>
-                <textarea type="text" className="postDescription" name={formData.description}/>
+                <textarea className="postDescription" name={formData.description}/>
                 <div className="postForm__upload">
                     <AttachFileIcon onClick={handleImageChange}/>
                     <button className="postSubmit" type="submit">Publish</button>

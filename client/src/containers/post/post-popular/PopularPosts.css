@@ -1,6 +1,7 @@
 
 .popular-post {
     display: flex;
+    padding: 15px;
 }
 .popular-post-image {
     object-fit: cover;
@@ -9,9 +10,9 @@
     background: lavender;
 }
 .popular-post-content {
+    width: 100%;
     display: block;
     text-align: left;
-    margin-left: 20px;
 }
 .popular-title {
     margin: 0;
@@ -20,9 +21,20 @@
 }
 .popular-rate {
     display: flex;
-    margin-top: 14px;
-    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
     font-size: 14px;
+    margin: 0;
+
+}
+.popular-rate p {
+    flex: 0.8;
+}
+.likes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 0.2;
 }
 .popular-rate img {
     vertical-align: middle;
@@ -31,10 +43,8 @@
     margin: 0;
     font-size: 14px;
 }
-.likes {
-    margin-right: 25px;
-}
 .between {
+    margin: 0;
     border: 1px solid #CCCCCC;
 }
 

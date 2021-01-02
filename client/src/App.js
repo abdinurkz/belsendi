@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
-import HomePage from "./pages/Home";
 import PostsPage from "./pages/Posts";
 import Login from "./containers/auth/Login";
 import Register from "./containers/auth/Register";
@@ -17,8 +16,7 @@ function App() {
       <BrowserRouter>
           <Provider store={store}>
               <Switch>
-                  <Route exact path="/" component={HomePage}/>
-                  <Route path="/posts" component={PostsPage}/>
+                  <Route exact path="/" component={PostsPage}/>
                   <Route path="/post/:id" component={PostDetail}/>
                   <Route path="/digests" component={DigestsPage}/>
                   <Route path="/petitions" component={PetitionsPage}/>
