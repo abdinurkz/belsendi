@@ -9,7 +9,8 @@ const StyledPostCard = styled.article`
     max-width: 750px;
     grid-template-columns: 1fr 2fr;
     background-color: #ffffff;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    border: 1px solid #ccc; 
+    border-radius: 2px;
     margin: 10px 0;
     cursor: pointer;
 `

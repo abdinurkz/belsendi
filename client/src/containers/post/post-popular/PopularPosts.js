@@ -9,6 +9,7 @@ const StyledPopularPosts = styled.div`
     border: 1px solid #ccc;
     color: black;
     background-color: #fff;
+    border-radius: 2px;
 `
 
 const PopularPosts = () => {

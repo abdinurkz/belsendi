@@ -1,6 +1,13 @@
 import React, { useEffect } from 'react'
 import { getDigests } from '../../store/digest/digest.action';
 import { connect } from 'react-redux'
+import Taxi from './assets/taxi-max.png';
+import Conference from './assets/conference.png';
+import Charity from './assets/charity.png';
+import Clinics from './assets/clinics.png';
+import Senate from './assets/senate.png';
+import Municipal from './assets/municipal.png';
+import Mini from './assets/taxi-min.png';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -29,8 +36,7 @@ const DigestImage = styled.div`
     img {
         flex: 1;
         object-fit: cover;
-        width: 571px;
-        margin: 1px;
+        width: 100%;
         height: 398px;
     }
 `
@@ -46,6 +52,12 @@ const Main = styled.div`
 `
 const FirstNews = styled.div`
     background: #c4c4c4;
+    img {
+        flex: 1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 `
 const SecondNews = styled.div`
     display: grid;
@@ -54,6 +66,13 @@ const SecondNews = styled.div`
     
     div {
         background: #c4c4c4;
+    } 
+    
+    div img {
+        flex: 1;            
+        object-fit: cover;  
+        width: 100%;      
+        height: 195px;  
     }
     
 `
@@ -66,22 +85,33 @@ const NewsFlex = styled.div`
     grid-template-rows: 200px;
     grid-column-gap: 10px;
     
-    > div {
+    div {
         background: #c4c4c4;
         padding: 0;
+    }
+    
+    div img {   
+        flex: 1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 `
 const DigestCity = styled.h4`
     position: absolute;
-    top: 440px;
+    top: 460px;
     left: 160px;
     text-align: left;
     color: #627CFF;
+    border: 1px solid #627CFF;
+    background-color: #fff;
+    padding: 2px 8px;
+    font-weight: normal;
 `
 const DigestCountry = styled.h2`
     position: absolute;
     left: 160px;
-    top: 470px;
+    top: 490px;
     text-align: left;
     font-weight: 600;
     color: white;
@@ -100,22 +130,23 @@ const Digest = ({getDigests, digests}) => {
                 {digests.map((digest, index) =>(
                     <Main key={index}>
                         <DigestImage>
-                            <img src={digest.image} alt="Does not exist"/>
+                            <img src={Taxi} alt="Does not exist"/>
                         </DigestImage>
-                        <DigestCity>Nur-Sultan</DigestCity>
-                        <DigestCountry>{digest.title}</DigestCountry>
+                        <DigestCity>CITY</DigestCity>
+                        <DigestCountry>City Taxi
+                            and improving public transport</DigestCountry>
                     </Main>
                 ))}
                 <DigestMain>
                     <FirstNews>
-                        <img src={""} alt="Does not exist"/>
+                        <img src={Conference} alt="Does not exist"/>
                     </FirstNews>
                     <SecondNews>
-                        <div className="part-one">
-
+                        <div>
+                            <img src={Charity} alt="Does not exist"/>
                         </div>
-                        <div className="part-two">
-
+                        <div>
+                            <img src={Clinics} alt="Does not exist"/>
                         </div>
                     </SecondNews>
                 </DigestMain>
@@ -123,9 +154,15 @@ const Digest = ({getDigests, digests}) => {
             <DigestTitle>DIGEST</DigestTitle>
             <News>
                 <NewsFlex>
-                    <div/>
-                    <div/>
-                    <div/>
+                    <div>
+                        <img src={Senate} alt="Does not exist"/>
+                    </div>
+                    <div>
+                        <img src={Municipal} alt="Does not exist"/>
+                    </div>
+                    <div>
+                        <img src={Mini} alt="Does not exist"/>
+                    </div>
                 </NewsFlex>
             </News>
         </Container>
