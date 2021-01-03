@@ -8,7 +8,7 @@ import Clinics from './assets/clinics.png';
 import Senate from './assets/senate.png';
 import Municipal from './assets/municipal.png';
 import Mini from './assets/taxi-min.png';
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Container = styled.div`
     margin: 20px 110px;
@@ -32,14 +32,6 @@ const DigestCard = styled.div`
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
 `
-const DigestImage = styled.div`
-    img {
-        flex: 1;
-        object-fit: cover;
-        width: 100%;
-        height: 398px;
-    }
-`
 const DigestMain = styled.div`
     display: grid;
     grid-template-columns: 1fr;
@@ -49,9 +41,21 @@ const DigestMain = styled.div`
 const Main = styled.div`
     background: #c4c4c4;
     cursor: pointer;
+    position: relative;
+    max-height: 400px;
+    
+    img {
+        flex: 1;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 `
 const FirstNews = styled.div`
     background: #c4c4c4;
+    position: relative;
+   
+    
     img {
         flex: 1;
         object-fit: cover;
@@ -66,13 +70,14 @@ const SecondNews = styled.div`
     
     div {
         background: #c4c4c4;
+        max-height: 195px;
     } 
     
     div img {
         flex: 1;            
         object-fit: cover;  
         width: 100%;      
-        height: 195px;  
+        height: 100%;  
     }
     
 `
@@ -97,24 +102,30 @@ const NewsFlex = styled.div`
         height: 100%;
     }
 `
-const DigestCity = styled.h4`
+const Tag = styled.h4`
     position: absolute;
-    top: 460px;
-    left: 160px;
     text-align: left;
     color: #627CFF;
     border: 1px solid #627CFF;
     background-color: #fff;
     padding: 2px 8px;
     font-weight: normal;
+    
+    ${props => props && css`
+        left: ${props.left}px;
+        top: ${props.top}px;
+    `}
 `
-const DigestCountry = styled.h2`
+const Text = styled.h2`
     position: absolute;
-    left: 160px;
-    top: 490px;
     text-align: left;
     font-weight: 600;
     color: white;
+    
+    ${props => props && css`
+        left: ${props.left}px;
+        top: ${props.top}px;
+    `}
 `
 
 const Digest = ({getDigests, digests}) => {
@@ -129,24 +140,28 @@ const Digest = ({getDigests, digests}) => {
             <DigestCard>
                 {digests.map((digest, index) =>(
                     <Main key={index}>
-                        <DigestImage>
-                            <img src={Taxi} alt="Does not exist"/>
-                        </DigestImage>
-                        <DigestCity>CITY</DigestCity>
-                        <DigestCountry>City Taxi
-                            and improving public transport</DigestCountry>
+                        <img src={Taxi} alt="Does not exist"/>
+                        <Tag top="300" left="20">CITY</Tag>
+                        <Text top="330" left="20">City Taxi
+                            and improving public transport</Text>
                     </Main>
                 ))}
                 <DigestMain>
                     <FirstNews>
                         <img src={Conference} alt="Does not exist"/>
+                        <Tag left="20" top="100">EVENT</Tag>
+                        <Text left="20" top="130">QAZNet 25 Years Conference</Text>
                     </FirstNews>
                     <SecondNews>
-                        <div>
+                        <div style={{ position: 'relative' }}>
                             <img src={Charity} alt="Does not exist"/>
+                            <Tag left="20" top="100">SOCIAL</Tag>
+                            <Text left="20" top="130">Charity “Happy Child”</Text>
                         </div>
-                        <div>
+                        <div style={{ position: 'relative' }}>
                             <img src={Clinics} alt="Does not exist"/>
+                            <Tag left="20" top="100">SOCIAL</Tag>
+                            <Text left="20" top="130">City municipal clinics</Text>
                         </div>
                     </SecondNews>
                 </DigestMain>
@@ -154,14 +169,20 @@ const Digest = ({getDigests, digests}) => {
             <DigestTitle>DIGEST</DigestTitle>
             <News>
                 <NewsFlex>
-                    <div>
+                    <div style={{ position: 'relative' }}>
                         <img src={Senate} alt="Does not exist"/>
+                        <Tag left="20" top="100">GOVERNMENT</Tag>
+                        <Text left="20" top="130">Senate meeting</Text>
                     </div>
-                    <div>
+                    <div style={{ position: 'relative' }}>
                         <img src={Municipal} alt="Does not exist"/>
+                        <Tag left="20" top="100">CITY</Tag>
+                        <Text left="20" top="130">Municipal institutions</Text>
                     </div>
-                    <div>
+                    <div style={{ position: 'relative' }}>
                         <img src={Mini} alt="Does not exist"/>
+                        <Tag left="20" top="100">CITY</Tag>
+                        <Text left="20" top="130">City Taxi Public Transport</Text>
                     </div>
                 </NewsFlex>
             </News>
