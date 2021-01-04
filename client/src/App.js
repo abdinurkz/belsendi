@@ -8,7 +8,7 @@ import Register from "./containers/auth/Register";
 import DigestsPage from "./pages/Digests";
 import SurveysPage from "./pages/Surveys";
 import PetitionsPage from "./pages/Petitions";
-import SurveyDetail from "./containers/survey/survey-detail/SurveyDetail";
+import SurveyDetail from "./containers/survey/SurveyDetail";
 import PostDetail from "./containers/post/PostDetail";
 
 function App() {

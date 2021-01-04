@@ -1,28 +1,39 @@
 import React from "react";
-import "./Survey.css"
-import SurveyCard from "./survey-card/SurveyCard";
+import SurveyCard from "./SurveyCard";
+import styled from 'styled-components'
 import {Link} from "react-router-dom";
+
+const StyledSurveys = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    margin-bottom: 80px;
+`
+const SurveyContainer = styled.div`
+    max-width: 1140px;
+    margin: 0 auto;
+`
 
 const Survey = props => {
     return (
-        <div className="containers">
+        <SurveyContainer>
             <h2 className="post">Surveys</h2>
-            <div className="surveys">
+            <StyledSurveys>
                 <Link to="survey/:id" className="survey-link">
                     <SurveyCard/>
                 </Link>
                 <SurveyCard/>
                 <SurveyCard/>
                 <SurveyCard/>
-            </div>
+            </StyledSurveys>
             <h2 className="post">Petitions</h2>
-            <div className="surveys">
+            <StyledSurveys>
                 <SurveyCard/>
                 <SurveyCard/>
                 <SurveyCard/>
                 <SurveyCard/>
-            </div>
-        </div>
+            </StyledSurveys>
+        </SurveyContainer>
     )
 };
 

@@ -1,12 +1,26 @@
 import React from "react";
-import SurveyCard from "../survey-card/SurveyCard";
-import "./SurveyDetail.css"
+import SurveyCard from "./SurveyCard";
+import styled from 'styled-components'
 
+
+
+const StyledSurveyDetails = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 30px;
+    background-color: #f4f4f4;
+    padding: 30px;
+    max-height: 600px;
+`
+const SurveyContainer = styled.div`
+    max-width: 1140px;
+    margin: 0 auto;
+`
 
 const SurveyDetail = props => {
     return (
-        <div className="containers">
-            <div className="survey-detail">
+        <SurveyContainer>
+            <StyledSurveyDetails>
                 <SurveyCard/>
                 <div className="survey-question-info">
                     <h2 className="survey-title">Survey</h2>
@@ -38,8 +52,8 @@ const SurveyDetail = props => {
                         <button>Next</button>
                     </div>
                 </div>
-            </div>
-        </div>
+            </StyledSurveyDetails>
+        </SurveyContainer>
     )
 };
 
