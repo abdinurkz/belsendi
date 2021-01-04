@@ -125,3 +125,17 @@ exports.getListOfUsers = async function (req, res) {
         })
     }
 };
+
+exports.logout = async function (req, res) {
+    try {
+        console.log(req.cookies.auth)
+        req.user.deleteToken(req.token,(err,user)=>{
+            if(err) return res.status(400).send(err);
+            res.sendStatus(200);
+        });
+    } catch (e) {
+        res.status(500).json({
+            message: 'Cannot logout!'
+        })
+    }
+}

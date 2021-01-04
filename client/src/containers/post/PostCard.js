@@ -1,7 +1,7 @@
 import React from "react";
 import Like from "../../assets/images/like.svg";
 import Comment from "../../assets/images/comment.svg";
-import image from "./assets/image.png"
+import image from "./assets/img.png"
 import styled from 'styled-components'
 
 const StyledPostCard = styled.article`

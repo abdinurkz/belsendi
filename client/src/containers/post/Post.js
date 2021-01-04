@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import PostCard from "./PostCard";
-import CreatePost from "./post-form/CreatePost";
-import PopularPosts from "./post-popular/PopularPosts";
+import PostForm from "./PostForm";
+import PostPopular from "./PostPopular";
 import { getPosts } from "../../store/post/post.action"
 import Section from "../../components/Section";
 import {Link} from "react-router-dom";
@@ -37,7 +37,7 @@ const Post = (props) => {
             <PostContainer>
                 <div className="posts">
                     <Section title="POSTS"/>
-                    <CreatePost/>
+                    <PostForm/>
                     <div className="post_cards">
                         {posts.map((post, i) =>
                             <Link to="post/:id" key={i}>
@@ -46,7 +46,7 @@ const Post = (props) => {
                         )}
                     </div>
                 </div>
-                <PopularPosts/>
+                <PostPopular/>
             </PostContainer>
         </div>
     );
